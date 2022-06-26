@@ -1,1 +1,6 @@
-export declare const emailCensor: (email: string) => void;
+import { emailCensorArgs, randomCensorArgs, censorArgs, censorWithNumbersArgs, censorDefinedTextArgs } from './interface/FuncArgs';
+export declare const emailCensor: ({ email, censorCharacter, splitter }: emailCensorArgs) => string;
+export declare const randomCensor: ({ text, size, censorCharacter }: randomCensorArgs) => string;
+export declare const censor: ({ text, censorCharacter }: censorArgs) => string;
+export declare const censorWithIndexs: ({ text, indexs, censorCharacter }: censorWithNumbersArgs) => string;
+export declare const censorDefinedText: ({ text, definedText, censorCharacter }: censorDefinedTextArgs) => string;
