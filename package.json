@@ -1,0 +1,31 @@
+{
+  "name": "textspace",
+  "version": "1.0.0",
+  "description": "Censor your text with textspace package. It is a simple package to censor your text.",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "nodemon index.ts",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "text censor",
+    "censor",
+    "text"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emresengul/textspace.git"
+  },
+  "bugs": {
+    "url": "https://github.com/emresengul/textspace/issues"
+  },
+  "homepage": "https://github.com/emresengul/textspace#readme",
+  "author": "emresengul",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.16",
+    "ts-node": "^10.8.0",
+    "typescript": "^4.7.2"
+  }
+}
