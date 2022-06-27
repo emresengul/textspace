@@ -19,7 +19,7 @@ export const randomCensor = ({ text, size = 3, censorCharacter = "*" }: randomCe
         const randomValue = Math.floor(Math.random() * text.length)
         !randomArray.find((val) => val === randomValue) && randomArray.push(randomValue)
     }
-    return censorWithIndexs({ text, indexs: randomArray, censorCharacter })
+    return censorWithIndexes({ text, indexes: randomArray, censorCharacter })
 }
 
 export const censor = ({ text, censorCharacter = '*' }: censorArgs): string => {
@@ -27,13 +27,13 @@ export const censor = ({ text, censorCharacter = '*' }: censorArgs): string => {
     // Deleting first and last character from array because of we are not want to censored first and last character 
     numberArray.shift()
     numberArray.pop()
-    return censorWithIndexs({ text, indexs: numberArray, censorCharacter })
+    return censorWithIndexes({ text, indexes: numberArray, censorCharacter })
 }
 
 
-export const censorWithIndexs = ({ text, indexs, censorCharacter = '*' }: censorWithNumbersArgs): string => {
+export const censorWithIndexes = ({ text, indexes, censorCharacter = '*' }: censorWithNumbersArgs): string => {
     const splitedText = text.split("")
-    indexs.forEach(value => splitedText[value] = censorCharacter)
+    indexes.forEach(value => splitedText[value] = censorCharacter)
     return splitedText.join("")
 }
 

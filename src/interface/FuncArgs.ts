@@ -16,7 +16,7 @@ export interface censorArgs extends CensorMainArgs {
 }
 export interface censorWithNumbersArgs extends CensorMainArgs {
     text: string;
-    indexs: number[];
+    indexes: number[];
 }
 export interface censorDefinedTextArgs extends CensorMainArgs {
     text: string;

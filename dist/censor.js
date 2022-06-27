@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.censorDefinedText = exports.censorWithIndexs = exports.censor = exports.randomCensor = exports.emailCensor = void 0;
+exports.censorDefinedText = exports.censorWithIndexes = exports.censor = exports.randomCensor = exports.emailCensor = void 0;
 var validations_1 = require("./common/validations");
 var enums_1 = require("./enums");
 var errors_1 = require("./errors");
@@ -24,7 +24,7 @@ var randomCensor = function (_a) {
     while (randomArray.length < size) {
         _loop_1();
     }
-    return (0, exports.censorWithIndexs)({ text: text, indexs: randomArray, censorCharacter: censorCharacter });
+    return (0, exports.censorWithIndexes)({ text: text, indexes: randomArray, censorCharacter: censorCharacter });
 };
 exports.randomCensor = randomCensor;
 var censor = function (_a) {
@@ -33,16 +33,16 @@ var censor = function (_a) {
     // Deleting first and last character from array because of we are not want to censored first and last character 
     numberArray.shift();
     numberArray.pop();
-    return (0, exports.censorWithIndexs)({ text: text, indexs: numberArray, censorCharacter: censorCharacter });
+    return (0, exports.censorWithIndexes)({ text: text, indexes: numberArray, censorCharacter: censorCharacter });
 };
 exports.censor = censor;
-var censorWithIndexs = function (_a) {
-    var text = _a.text, indexs = _a.indexs, _b = _a.censorCharacter, censorCharacter = _b === void 0 ? '*' : _b;
+var censorWithIndexes = function (_a) {
+    var text = _a.text, indexes = _a.indexes, _b = _a.censorCharacter, censorCharacter = _b === void 0 ? '*' : _b;
     var splitedText = text.split("");
-    indexs.forEach(function (value) { return splitedText[value] = censorCharacter; });
+    indexes.forEach(function (value) { return splitedText[value] = censorCharacter; });
     return splitedText.join("");
 };
-exports.censorWithIndexs = censorWithIndexs;
+exports.censorWithIndexes = censorWithIndexes;
 var censorDefinedText = function (_a) {
     var text = _a.text, definedText = _a.definedText, _b = _a.censorCharacter, censorCharacter = _b === void 0 ? '*' : _b;
     var numberArray = Array.from({ length: definedText.length }, function (arrItem) { return "*"; });
