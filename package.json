@@ -1,6 +1,6 @@
 {
   "name": "textspace",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Censor your text with textspace package. It is a simple package to censor your text.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
